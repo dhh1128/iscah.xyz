@@ -5,194 +5,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;1,400;1,500&family=Barlow:ital,wght@0,300;0,500;1,300;1,500&display=swap" rel="stylesheet">
-    <style>
-/* Make sure that padding and border are included in total width/height of all elements. */
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-family: Barlow, Arial, sans-serif;
-  color: #423d37;
-}
-
-body {
-  margin: 0px;
-}
-
-main::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-[class*="col-"] {
-  float: left;
-  padding: 16px;
-}
-
-header {
-  background-color: #ece4ce;
-  background-image: url(img/with-camel-banner.jpg);
-  background-repeat: no-repeat;
-  padding: 0px;
-  height: 256px;
-  line-height: 256px;
-  font-size: 96pt;
-  font-family: "Barlow Condensed", Barlow, Arial, sans-serif;
-  text-align: center;
-  vertical-align: middle;
-  color: #36322f;
-  border-bottom: solid 1px #bdb6a4;
-}
-
-h1, h2, h3, li, summary {
-  font-family: "Barlow Condensed", Barlow, Arial, sans-serif;
-  color: #36322f;
-}
-
-h1, h2, h3 {
-  margin: 0.5em 0 0.2em;
-}
-
-nav {
-  margin-top: 24px;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  color: white;
-  padding: 6px;
-  margin-bottom: 6px;
-  background-color: #635c52;
-  border-radius: 12px;
-  border: 1px solid #bdb6a4;
-  cursor: pointer;
-}
-
-nav li:hover {
-  background-color: #ece4ce;
-  color: #36322f;
-}
-
-aside {
-  padding: 24px 16px 16px;
-  margin-top: 24px;
-}
-
-aside > details {
-  background-color: #f5f2e8;
-  border-radius: 12px;
-  border: 1px solid #bdb6a4;
-  padding: 8px;
-  margin-bottom: 8px;
-  cursor: pointer;
-  font-size: 90%;
-  color: #635c52;
-}
-
-details > summary {
-  font-size: 111%;
-}
-
-aside > details:hover {
-  background-color: #ece4ce;
-}
-
-footer {
-  text-align: center;
-  font-size: 90%;
-  color: #bdb6a4;
-  position:fixed;
-  bottom:0;
-  width:100%;
-}
-
-/* The default layout is 12 columns where every column takes up the
-full width of the viewport. This forces "columns" to stack on top of
-each other, making scrolling purely vertical. It is a good choice for
-mobile and similarly small screens. */
-[class*="col-"] {
-  width: 100%;
-}
-
-/* On tablets, we have a bit more horizontal space to work with. Plan
-for columns that are each 1/12th of the viewport in width, and define
-CSS classes for column spanning ("col-s-*") that let us easily assign
-fractions of the viewport to our visual elements. In the HTML, we will
-use these classes to clump elements together into 3 groups, with the
-first two clumps displaying side-by-side, and the last clump spilling
-over to display below the others. */
-@media only screen and (min-width: 600px) {
-  .col-s-1 {width: 8.33%;}
-  .col-s-2 {width: 16.66%;}
-  .col-s-3 {width: 25%;}
-  .col-s-4 {width: 33.33%;}
-  .col-s-5 {width: 41.66%;}
-  .col-s-6 {width: 50%;}
-  .col-s-7 {width: 58.33%;}
-  .col-s-8 {width: 66.66%;}
-  .col-s-9 {width: 75%;}
-  .col-s-10 {width: 83.33%;}
-  .col-s-11 {width: 91.66%;}
-  .col-s-12 {width: 100%;}
-}
-
-/* Define another breakpoint for displays bigger than tablets,
-and define another set of CSS classes that will be active on
-laptops and similar. These CSS class names are different from
-the ones for tablets because they lack the "-s" in the middle.
-We can then assign both tablet-appropriate and laptop-appropriate
-classes to elements of our layout. When the width of the viewport
-is very narrow, the meaning of the classes expands to a no-op,
-and the default, purely vertical layout is used. When the
-viewport is tablet-like, the "col-s-*" classes have a meaning
-that overrides the default. When the viewport is even wider, the
-"col-s-*" classes mean nothing, but the "col-*" classes have a
-defined meaning that makes our layout responsive to the wider
-viewport. */
-@media only screen and (min-width: 768px) {
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
-}
-
-</style>
+    <link rel="stylesheet" type="text/css" href="default.css">
 </head>
 <body>
 
 <header>Iscah</header>
 
 <main>
-<nav class="col-3 col-s-3">
-    <ul>
-        <li>The Flight</li>
-        <li>The City</li>
-        <li>The Island</li>
-        <li>The Food</li>
-    </ul>
+<nav>
+    <a href="#">The Flight</a>
+    <a href="#">The City</a>
+    <a href="#">The Island</a>
+    <a href="#">The Food</a>
 </nav>
 
-<article class="col-6 col-s-9">
+<article class="col-7 col-s-9">
     <h1>Iscah</h1>
     <p>This is a serial story about a girl born in ancient Israel around 610 BC, who emigrated to the Americas.</p>
 </article>
 
-<aside class="col-3 col-s-12">
+<aside class="col-5 col-s-3">
     <details>
         <summary>Epcot Center</summary>
         <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
