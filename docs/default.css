@@ -13,10 +13,21 @@ body {
   margin: 0px;
 }
 
-main::after {
-  content: "";
-  clear: both;
-  display: table;
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: #635c52;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 [class*="col-"] {
@@ -30,42 +41,61 @@ header {
   background-repeat: no-repeat;
   padding: 0px;
   height: 256px;
-  line-height: 256px;
-  font-size: 96pt;
-  font-family: "Barlow Condensed", Barlow, Arial, sans-serif;
-  text-align: center;
-  vertical-align: middle;
-  color: #36322f;
   border-bottom: solid 1px #bdb6a4;
 }
 
-h1, h2, h3, nav, summary {
+h1, h2, h3, nav, summary, header {
   font-family: "Barlow Condensed", Barlow, Arial, sans-serif;
   color: #36322f;
 }
 
 h1, h2, h3 {
+  font-weight: 500;
   margin: 0.5em 0 0.2em;
+}
+
+header h1 {
+  font-size: 96pt;
+  margin: 50px 0 0 300px;
+}
+
+header p {
+  margin-left: 308px;
+  margin-right: 16px;
+  margin-block-start: -16px;
+  font-size: 80%;
+  color: #787166;
 }
 
 nav {
   width: 100%;
-  padding: 4px 16px;
+  padding: 8px 16px 0 16px;
   background-color: #635c52;
   color: white;
-  border-bottom: 1px solid #bdb6a4;
+  font-size: 93%;
 }
 
 nav a {
   color: white;
   cursor: pointer;
-  text-decoration: none:
+  text-decoration: none;
   display: inline-block;
+  padding: 0 0.5em 4px 0.5em;
+  border-radius: 7px 7px 0 0;
 }
 
 nav a:hover {
   background-color: #ece4ce;
   color: #36322f;
+}
+
+nav a.self {
+  color: #635c52;
+  background-color: white;
+}
+
+nav a.self:hover {
+  color: black;
 }
 
 aside {
@@ -96,8 +126,6 @@ footer {
   text-align: center;
   font-size: 90%;
   color: #bdb6a4;
-  position:fixed;
-  bottom:0;
   width:100%;
 }
 
@@ -157,4 +185,8 @@ viewport. */
   .col-10 {width: 83.33%;}
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
+}
+
+@media print {
+  body {-webkit-print-color-adjust: exact;}
 }
